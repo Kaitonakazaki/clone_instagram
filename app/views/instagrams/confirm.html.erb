@@ -1,0 +1,16 @@
+<h3>以下の内容で、送信する。</h3>
+
+<%= form_with(model: @instagram, url: instagrams_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+
+  <p>タイトル:<%= @instagram.title %></p>
+  <p>本文:<%= @instagram.content %></p>
+  <%= form.submit  "登録する" %>
+<% end %>
+
+<%= form_with(model: @instagram, url: new_instagram_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "もどる", name: 'back' %>
+<% end %>

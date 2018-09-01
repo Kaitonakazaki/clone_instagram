@@ -1,0 +1,23 @@
+<h1>ブログ一覧</h1>
+
+<p><%= notice %></p>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+
+<% @instagrams.each do |instagram| %>
+  <tr>
+    <td><%= instagram.title %></td>
+    <td><%= instagram.content %></td>
+
+    <td><%= link_to '詳細の確認', instagram_path(instagram.id) %></td>
+    <td><%= link_to '編集する', edit_instagram_path(instagram.id),data:{confirm: '編集して大丈夫ですか'} %></td>
+    <td><%= link_to '削除する', instagram_path(instagram.id), method: :delete, data:{confirm: '削除して大丈夫ですか'} %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+<%= link_to '新規投稿する', new_instagram_path %>

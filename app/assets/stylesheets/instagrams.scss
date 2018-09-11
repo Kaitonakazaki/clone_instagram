@@ -1,3 +1,339 @@
 // Place all the styles related to the instagrams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+   background: linear-gradient(-100deg, rgba(800, 500, 100, .55), rgba(800, 10, 150, .55)),
+   url(phone-918928_1280);
+   // background-size: 100% 500px;
+   background-size: 100% 900px;
+   @media only screen and (max-width: 767px){
+     background-image: url(golden-gate-bridge-1081782_640)
+   }
+
+}
+.form_theme{
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  font-size: 6rem;
+}
+.index_h{
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  font-size: 6rem;
+}
+.detail_image{
+  text-align: center;
+}
+
+.box29 {
+    margin: 0.2em 0;
+    background: #dcefff;
+    width:20rem;
+    height:5.5rem;
+    opacity: 0.8;
+    color: black;
+}
+.box29 .box-title {
+    font-size: 0.9em;
+    background: #5fb3f5;
+    padding: 2px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box29 p {
+    padding: 10px 5px;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+.show_square_btn1{
+    display: inline-block;
+    padding: 7px 17px;
+	  border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    transition: .4s;
+}
+
+.show_square_btn1:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.show_square_btn2{
+    display: inline-block;
+    padding: 7px 19px;
+	  border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #0000CC 0%, #99FFFF 100%);
+    transition: .4s;
+}
+
+.show_square_btn2:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, white 0%, #0000CC 100%);
+}
+
+.show_square_btn3{
+    display: inline-block;
+    padding: 7px 15px;
+	  border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg,  0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, red 0%, #FF0066 100%);
+    transition: .4s;
+}
+
+.show_square_btn3:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, white 0%, red 100%);
+}
+#feedback-page{
+    text-align:center;
+}
+
+#form-main{
+    width:100%;
+    float:left;
+    padding-top:0px;
+    text-align: center;
+}
+
+#form-div {
+    background-color:rgba(72,72,72,0.4);
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:35px;
+    padding-bottom:50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+  margin-top:30px;
+    margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+    color:#3c3c3c;
+    font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+    color:#30aed6;
+    border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#name:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 8px 5px;
+  background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+  background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#comment{
+    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    background-color:white;
+}
+
+#button-blue{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    float:left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+    #form-div{
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+.image_label{
+  color: white;
+}
+.form_user_page{
+  text-align: center;
+}
+.form_user_chracter{
+  color:white;
+  font-size: 3rem;
+}
+
+
+
+.box30 {
+    margin: 1rem 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    // width:40rem;
+    text-align: center;
+}
+.box30 .box-title {
+    font-size: 0.5em;
+    background: #9933FF;
+    padding: 0.5px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+.box30 p {
+    padding: 3px 3px;
+    margin: 0;
+    font-size: 0.6em;
+    letter-spacing: 0.9em;
+}
+
+.confirm_title{
+  color: white;
+  font-size:4rem;
+}
+// .confirm_body{
+//   text-align: center;
+// }
+.confirm_content{
+  color: white;
+  font-size:5rem;
+}
+
+.box3 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: #4169E1;/*背景色*/
+}
+.box3 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+div.example {
+  width: 500x;
+  height: 200px;
+  overflow: scroll;
+}
+
+.kousin {
+    text-align: center;
+		overflow:auto;
+		width:500px; height:520px;
+		padding:5px;
+		border:2px dotted #ffffff;
+		color:#e8e8e8;
+		background-color:white;
+		line-height:1.5em;
+    opacity: 0.9;
+	}

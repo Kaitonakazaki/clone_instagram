@@ -1,16 +1,21 @@
-<h3>以下の内容で、送信する。</h3>
+<div class="confirm_body">
+  <h3 class="confirm_title">Please confirm the contents</h3>
 
-<%= form_with(model: @instagram, url: instagrams_path, local: true) do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :content %>
+  <%= form_with(model: @instagram, url: instagrams_path, local: true) do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :content %>
 
-  <p>タイトル:<%= @instagram.title %></p>
-  <p>本文:<%= @instagram.content %></p>
-  <%= form.submit  "登録する" %>
-<% end %>
+      <p class="confirm_content">Title <%= @instagram.title %></p>
+      <p class="confirm_content">Content <%= @instagram.content %></p>
+    <%= image_tag(@instagram.image) %>
+    <%= form.hidden_field :image_cache %>
+    <%= form.submit  "登録する",class:"confirm_button" %>
+  <% end %>
 
-<%= form_with(model: @instagram, url: new_instagram_path, local: true, method: 'get') do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :content %>
-  <%= form.submit "もどる", name: 'back' %>
-<% end %>
+  <%= form_with(model:@instagram, url:new_instagram_path, local:true, method:"get") do |form| %>
+
+    <%= form.hidden_field :image_cache %>
+    <%= form.submit "戻る",class:"confirm_back_button",name: "back" %>
+  <% end %>
+
+</div>

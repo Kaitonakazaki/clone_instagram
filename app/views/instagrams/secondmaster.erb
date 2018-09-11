@@ -1,0 +1,25 @@
+<h1>ブログ一覧</h1>
+
+
+<table class="list_table">
+
+<% @instagrams.each do |instagram| %>
+  <tr>
+    <td>
+<div class="box29">
+  <div class="box-title">title</div>
+      <p><%= instagram.title %></p>
+      </td>
+
+    <td><%= link_to '詳細の確認', instagram_path(instagram.id) %></td>
+  <% if instagram.user_id == current_user.try(:id) %>
+    <td><%= link_to '編集する', edit_instagram_path(instagram.id),data:{confirm: '編集して大丈夫ですか'} %></td>
+    <td><%= link_to '削除する', instagram_path(instagram.id), method: :delete, data:{confirm: '削除して大丈夫ですか'} %></td>
+  <% end %>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br>
+<%= link_to '新規投稿する', new_instagram_path %>

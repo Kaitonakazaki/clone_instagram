@@ -1,0 +1,16 @@
+<h1>ブログ詳細画面</h1>
+<p>タイトル: <%= @instagram.title %></p>
+<p>内容: <%= @instagram.content %></p>
+
+<p class="detail_image">
+  <strong>Image:</strong>
+  <%= image_tag @instagram.image %>
+</p>
+
+<% unless @instagram.user_id == current_user.id %>
+  <% if @favorite.present? %>
+    <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to 'お気に入りする', favorites_path(instagram_id: @instagram.id), method: :post, class: 'btn btn-primary' %>
+  <% end %>
+<% end %>

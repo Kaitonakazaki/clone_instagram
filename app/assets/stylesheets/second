@@ -1,0 +1,39 @@
+// Place all the styles related to the instagrams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+   background: linear-gradient(-100deg, rgba(800, 500, 100, .55), rgba(800, 10, 150, .55)),
+   url(phone-918928_1280);
+   // background-size: 100% 500px;
+   background-size: 100% 900px;
+   @media only screen and (max-width: 767px){
+     background-image: url(golden-gate-bridge-1081782_640)
+   }
+
+}
+
+
+.detail_image{
+  text-align: center;
+}
+
+.box29 {
+    margin: 0.2em 0;
+    background: #dcefff;
+    width:20rem;
+    height:5.5rem;
+}
+.box29 .box-title {
+    font-size: 0.9em;
+    background: #5fb3f5;
+    padding: 2px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box29 p {
+    padding: 10px 5px;
+    margin: 0;
+    font-size: 1.5rem;
+}

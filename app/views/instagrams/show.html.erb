@@ -12,7 +12,11 @@
 
 
 
-
+  <% if @instagram.user_id == current_user.try(:id) %>
+    <%= link_to 'Edit', edit_instagram_path(@instagram), class:"square_btn" %> |
+    <%= link_to 'Back', instagrams_path,class:"square_btn" %>
+    <%= link_to 'Delete', instagram_path(@instagram.id), method: :delete, data:{confirm: '削除して大丈夫ですか'},class:"square_btn" %>
+  <% end %>
       <% unless @instagram.user_id == current_user.id %>
         <% if @favorite.present? %>
           <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>

@@ -7,16 +7,16 @@
       <tr>
         <td>
       <div class="box29">
-        <div class="box-title">title</div>
-            <p><%= instagram.title %></p>
-            </td>
+        <div class="box-title">Contributor</div>
+            <p><%= instagram.user.name %></p>
+        </td>
 
           <td><%= link_to 'show',instagram_path(instagram.id), class:"show_square_btn1" %></td>
         <% if instagram.user_id == current_user.try(:id) %>
           <td><%= link_to 'Edit', edit_instagram_path(instagram.id),data:{confirm: '編集して大丈夫ですか'},class:"show_square_btn2" %></td>
           <td><%= link_to 'Delete', instagram_path(instagram.id), method: :delete, data:{confirm: '削除して大丈夫ですか'},class:"show_square_btn3" %></td>
         <% end %>
-        </tr>
+       </tr>
       <% end %>
       </table>
       </div>

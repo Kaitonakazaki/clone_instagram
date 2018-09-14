@@ -44,6 +44,10 @@
               </div>
             </div>
 
+            <div class="sign_content"><%= f.label :icon %></div>
+            <div><%= f.file_field :icon, style: "margin-left: 46%" %></div>
+            <%= f.hidden_field :user_cache, id: :sign_content,style: "color:white" %>
+
             <div class="form-group">
               <div class="col-md-offset-2 col-md-10">
                 <%= f.submit "Create my account",class:"btn btn-primary btn-block" %>

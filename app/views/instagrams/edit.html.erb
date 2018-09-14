@@ -11,13 +11,23 @@
     </div>
   <% end %>
 
-  <div class="insta_title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div class="insta_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
+
+
+<div id="form-div">
+  <form class="form" id="form1">
+
+    <p class="name">
+      <%= form.text_field :title,class:"validate[required,custom[onlyLetter],length[0,100]] feedback-input",placeholder:"Title",id:"title" %>
+    </p>
+
+    <p class="text">
+      <%= form.text_field :content,class:"validate[required,length[6,300]] feedback-input",id:"comment",placeholder:"Comment" %>
+    </p>
+
+    <div class="submit">
+      <%= form.submit class:"ease",value:"SEND",id:"button-blue" %>
+      <div class="ease" ></div>
+    </div>
+  </form>
+</div>
 <% end %>

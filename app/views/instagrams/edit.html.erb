@@ -24,6 +24,13 @@
       <%= form.text_field :content,class:"validate[required,length[6,300]] feedback-input",id:"comment",placeholder:"Comment" %>
     </p>
 
+    <p>
+      <%= form.label :SelectImage,class:"image_label" %>
+      <%= image_tag(@instagram.image.url) if @instagram.image.url  %>
+      <%= form.file_field :image, id: :feed_image %>
+    </p>
+
+
     <div class="submit">
       <%= form.submit class:"ease",value:"SEND",id:"button-blue" %>
       <div class="ease" ></div>

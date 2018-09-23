@@ -1,0 +1,11 @@
+<h1 class="favorite_user_chracter"><%= current_user.name %> 's favorites</h1>
+<h1>
+<% if @favorites_instagrams.present? %>
+ <% @favorites_instagrams.each do |favorite| %>
+ <div class="box30">
+     <div class="box-title"><p><%= favorite.title %></p></div>
+     <p><%= favorite.content %></p>
+ </div>
+ <% end %>
+<% end %>
+</h1>

@@ -1,17 +1,8 @@
 <div class="form_user_page">
-   <h1 class="form_user_chracter"><%= @user.name %> 's Page and Your favorites</h1>
+   <h1 class="form_user_chracter"><%= current_user.name %> 's Page</h1>
 
- <p class="form_user_chracter">Your address is: <%= @user.email %><%= image_tag @user.icon,style: "margin-left:10px" %></p>
+ <p class="form_user_chracter">Your address is: <%= current_user.email %><%= image_tag current_user.icon,style: "margin-left:10px" %></p>
+ <%= link_to 'Yuor favorites',favorites_path, class:"square_btn_user" %>
 
- <h1>
- <% if @favorites_instagrams.present? %>
-  <% @favorites_instagrams.each do |favorite| %>
-  <div class="box30">
-      <div class="box-title"><p><%= favorite.title %></p></div>
-      <p><%= favorite.content %></p>
-  </div>
-  <% end %>
- <% end %>
- </h1>
  <br>
 </div>

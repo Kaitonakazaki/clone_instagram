@@ -56,6 +56,7 @@ class InstagramsController < ApplicationController
   end
 
   private
+  
   def instagram_params
     params.require(:instagram).permit(:title,:content,:image, :image_cache, :user_id)
   end

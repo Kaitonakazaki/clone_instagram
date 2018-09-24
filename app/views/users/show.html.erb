@@ -1,7 +1,7 @@
 <div class="form_user_page">
-   <h1 class="form_user_chracter"><%= current_user.name %> 's Page</h1>
+   <h1 class="form_user_chracter"><%= @user.name %> 's Page</h1>
 
- <p class="form_user_chracter">Your address is: <%= current_user.email %><%= image_tag current_user.icon,style: "margin-left:10px" %></p>
+ <p class="form_user_chracter">Your address is: <%= @user.email %><%= image_tag @user.icon,style: "margin-left:10px" %></p>
  <%= link_to 'Yuor favorites',favorites_path, class:"square_btn_user" %>
 
  <br>

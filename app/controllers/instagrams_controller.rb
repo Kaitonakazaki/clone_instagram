@@ -43,10 +43,8 @@ class InstagramsController < ApplicationController
   end
 
   def destroy
-
     @instagram.destroy
     redirect_to instagrams_path, notice:'削除した'
-
   end
 
   def confirm
@@ -56,7 +54,7 @@ class InstagramsController < ApplicationController
   end
 
   private
-  
+
   def instagram_params
     params.require(:instagram).permit(:title,:content,:image, :image_cache, :user_id)
   end

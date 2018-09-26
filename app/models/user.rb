@@ -8,7 +8,5 @@ class User < ApplicationRecord
   has_many :instagrams,dependent: :destroy
   has_many :favorites,dependent: :destroy
   has_many :favorite_instagrams, through: :favorites, source: :instagram
-
   mount_uploader :icon, IconUploader
-
 end

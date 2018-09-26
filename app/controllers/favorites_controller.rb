@@ -16,7 +16,7 @@ class FavoritesController < ApplicationController
   end
 
   private
-  
+
   def login_confirm
     redirect_to new_session_path unless logged_in?
   end

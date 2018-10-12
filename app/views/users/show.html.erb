@@ -4,5 +4,11 @@
  <p class="form_user_chracter">Your address is: <%= @user.email %><%= image_tag @user.icon,style: "margin-left:10px" %></p>
  <%= link_to 'Yuor favorites',favorites_path, class:"square_btn_user" %>
 
+<% @instagrams.each do |instagram| %>
+  <p><%= instagram.user.name %></p>
+  <p><%= instagram.title %></p>
+<% end %>
+
+
  <br>
 </div>
